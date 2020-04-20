@@ -14,14 +14,34 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<header class="mb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 ml-3">
+        <a href="http://www.vakhitov-km.ru/" class="logo">Наталья <br/>Горчакова <span>Аналитический психолог</span></a>
+      </div>
+      <div class="col-xs-6 ml-auto mr-4">
+
+        <div class="consult">
+          <div class="skype"></div><a href="skype:natalia477399?call">Консультация по SKYPE</a>
+        </div>
+        <div class="contact">
+          <a href="tel:79261723878">+7 926 172 38 78</a>
+          <a href="mailto:patience@list.ru">patience@list.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header><!-- header -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a href="index.html" class="navbar-brand">Наталья Горчакова</a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a href="index.html" class="nav-link">Главная</a>
           </li>
@@ -92,6 +112,32 @@
     </div>
   </section>
 
+  <!--- Home section -->
+  <section id="home-icons" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Если вы чувствуете, что готовы:</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fas fa-cogs fa-3x mb-2"></i>
+          <h3>Разобраться в себе</h3>
+          <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias assumenda distinctio fugiat ipsam itaque iure magnam nam necessitatibus nobis perspiciatis placeat possimus quam, quod, reprehenderit sed, sunt vero voluptatum.</span></p>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fas fa-users fa-3x mb-2"></i>
+          <h3>Выстроить крепкие отношения</h3>
+          <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias assumenda distinctio fugiat ipsam itaque iure magnam nam necessitatibus nobis perspiciatis placeat possimus quam, quod, reprehenderit sed, sunt vero voluptatum.</span></p>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center">
+          <i class="fas fa-child fa-3x mb-2"></i>
+          <h3>Ощутить Свободу</h3>
+          <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias assumenda distinctio fugiat ipsam itaque iure magnam nam necessitatibus nobis perspiciatis placeat possimus quam, quod, reprehenderit sed, sunt vero voluptatum.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -102,6 +148,12 @@
   <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
+
+    // Configure carousel
+    $('.carousel').carousel({
+      interval: 6000,
+      pause: 'hover'
+    })
   </script>
 </body>
 

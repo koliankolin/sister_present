@@ -35,3 +35,62 @@
 .carousel-caption .display-3 {
     font-size: 6.2vh;
 }
+
+header{
+    padding-top:2vh;
+}
+
+.skype {
+    display: inline-flex;
+    vertical-align:middle;
+    height: 7.0vh;
+    width: 7.0vh;
+    background: url("../img/skype.svg");
+    background-size: cover;
+}
+
+.logo{
+    font-size: 5.4vh;
+    text-transform:uppercase;
+}
+
+.logo span{
+    display:block;
+    font-family:'PT Serif', serif;
+    font-size: 2.5vh;
+    color:#9b9590;
+}
+
+.consult{
+    float:right;
+    margin-left:22px;
+}
+
+.consult a{
+    display:inline-flex;
+    vertical-align:middle;
+    width:100px;
+    font-size:2.3vh;
+}
+
+.contact{
+    float:right;
+}
+
+.contact a{
+    display:block;
+    font-size:2.7vh;
+}
+
+a{
+    color:#3b312f;
+    -webkit-transition:color .3s;
+    -o-transition:color .3s;
+    transition:color .3s;
+}
+
+a:hover,
+a.anchor{
+    text-decoration:none;
+    color: #196a71;
+}
