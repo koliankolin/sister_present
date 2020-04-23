@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .navbar .nav-link {
     font-size: 14px;
     text-transform: uppercase;
@@ -115,4 +119,18 @@ a.anchor{
 
 #about-short .about-sh {
     font-size: 3vh;
+}
+
+#page-header {
+    height: 200px;
+    background: url("../img/image1.jpg");
+    background-position: 0 -360px;
+    background-attachment: fixed;
+    color: #ffffff;
+    border-bottom: 1px #eee solid;
+    padding-top: 50px;
+}
+
+.about-img {
+    margin-top: -50px;
 }
