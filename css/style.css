@@ -135,19 +135,19 @@ a.anchor{
     margin-top: -50px;
 }
 
-#faq .card {
+#accordion {
     border: #444;
 }
 
 #faq a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 
 #faq .card-body,
 #faq .card-header {
-    background: #475857;
-    color: #fff;
+    background: #fff;
+    color: #000;
 }
 
 #faq .card-body {
@@ -157,4 +157,12 @@ a.anchor{
 #main-footer {
     background: #000;
     color: #fff;
+}
+
+[data-toggle="collapse"] i:before{
+    content: "\f146";
+}
+
+[data-toggle="collapse"].collapsed i:before{
+    content: "\f0fe";
 }
