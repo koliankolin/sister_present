@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-6 ml-3">
-                    <a href="http://www.vakhitov-km.ru/" class="logo">Наталья <br/>Горчакова <span>Аналитический психолог</span></a>
+                    <a href="index.html" class="logo">Наталья <br/>Горчакова <span>Аналитический психолог</span></a>
                 </div>
                 <div class="col-xs-6 ml-auto mr-4 mt-4">
                     <div class="consult">
@@ -50,13 +50,16 @@
                         <a href="about.html" class="nav-link">Обо мне</a>
                     </li>
                     <li class="nav-item">
-                        <a href="services.html" class="nav-link">Услуги</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="blog.html" class="nav-link">Блог</a>
                     </li>
                     <li class="nav-item">
+                        <a href="partners.html" class="nav-link">Партнеры</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="contact.html" class="nav-link">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="faq.html" class="nav-link">Вопросы</a>
                     </li>
                 </ul>
             </div>
@@ -94,6 +97,7 @@
 <!--    Icon boxes-->
     <section id="icon-boxes" class="py-5">
         <div class="container">
+            <h2 class="mb-5 text-center">Проходила(жу) обучение в следующих организациях:</h2>
             <div class="row mb-4">
                 <div class="col-md-4">
                     <div class="card bg-danger text-white text-center">
@@ -124,7 +128,91 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white text-center">
+                        <div class="card-body">
+                            <i class="fas fa-building fa-3x"></i>
+                            <h3>Заголовок</h3>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-danger text-white text-center">
+                        <div class="card-body">
+                            <i class="fas fa-credit-card fa-3x"></i>
+                            <h3>Заголовок</h3>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white text-center">
+                        <div class="card-body">
+                            <i class="fas fa-coffee fa-3x"></i>
+                            <h3>Заголовок</h3>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+<!--    Testimonials-->
+    <section id="testimonials" class="p-4 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center">Отзывы</h2>
+            <div class="row text-center">
+                <div class="col slider">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, molestiae.
+                        </p>
+                        <footer class="blockquote-footer">John Doe From
+                            <cite title="Company 1">Company 1</cite>
+                        </footer>
+
+                    </blockquote>
+
+                    <blockquote class="blockquote">
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, molestiae.
+                        </p>
+                        <footer class="blockquote-footer">Sam Smith From
+                            <cite title="Company 2">Company 2</cite>
+                        </footer>
+
+                    </blockquote>
+
+                    <blockquote class="blockquote">
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, molestiae.
+                        </p>
+                        <footer class="blockquote-footer">Andy Carrol From
+                            <cite title="Company 3">Company 3</cite>
+                        </footer>
+
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--    Footer-->
+
+    <footer id="main-footer" class="text-center p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>&copy; <span id="year"></span> Наталья Горчакова</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
@@ -137,6 +225,12 @@
     <script>
         // Get the current year for the copyright
         $('#year').text(new Date().getFullYear());
+
+        $('.slider').slick({
+           infinite: true,
+           slideToShow: 1,
+           slideToScroll: 1
+        });
     </script>
 </body>
 

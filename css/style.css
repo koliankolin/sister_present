@@ -134,3 +134,27 @@ a.anchor{
 .about-img {
     margin-top: -50px;
 }
+
+#faq .card {
+    border: #444;
+}
+
+#faq a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#faq .card-body,
+#faq .card-header {
+    background: #475857;
+    color: #fff;
+}
+
+#faq .card-body {
+    text-align: left;
+}
+
+#main-footer {
+    background: #000;
+    color: #fff;
+}
