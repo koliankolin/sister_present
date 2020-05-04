@@ -6,6 +6,7 @@
     --header-bg-color: #CFFCEC;
     --menu-text-color: #68618C;
     --menu-item-bg-color: #EFC9B8;
+    --home-heading-bg-color: #F7F1DD;
 }
 
 body {
@@ -107,7 +108,7 @@ body {
     font-weight: 500;
     font-size: 1.5rem;
     padding: 0.425rem;
-    margin: 0.5375rem;
+    /*margin: 0.1375rem;*/
 }
 
 .navbar-light .navbar-nav .active .nav-link,
@@ -120,30 +121,45 @@ body {
 }
 
 .carousel-item {
-    height: 450px;
+    height: 23rem;
 }
 
 .carousel-image-1 {
-    background: url("../img/image1.jpg");
+    /*background: url("../img/girl_lavender.jpg");*/
+    background: linear-gradient(
+            rgba(20,20,20, .5),
+            rgba(20,20,20, .5)),
+        url("../img/girl_lavender.jpg");
     background-size: cover;
 }
 
 .carousel-image-2 {
-    background: url("../img/image2.jpg");
+    background: linear-gradient(
+            rgba(20,20,20, .5),
+            rgba(20,20,20, .5)),
+    url("../img/lotos.jpg");
     background-size: cover;
 }
 
 .carousel-image-3 {
-    background: url("../img/image3.jpg");
+    background: linear-gradient(
+            rgba(20,20,20, .5),
+            rgba(20,20,20, .5)),
+    url("../img/flowers.jpg");
     background-size: cover;
 }
 
-.carousel-caption .lead {
-    font-size: 2.7vh;
+.mb-10 {
+    margin-bottom: 5rem;
 }
 
-.carousel-caption .display-3 {
-    font-size: 6.2vh;
+.blockquote {
+    font-size: 1.5rem;
+    margin-top: -50px;
+}
+
+.blockquote-footer {
+    color: var(--color-main);
 }
 
 .top-header a{
@@ -158,22 +174,84 @@ body {
     text-decoration:none;
 }
 
-#home-heading {
+#home-icons {
+    color: var(--menu-text-color);
+    font-family: Cormorant, serif;
+    text-align: center;
     position: relative;
-    min-height: 200px;
-    background: url("../img/lights.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #fff;
 }
 
-.dark-overlay {
+#home-icons h2 {
+    font-style: normal;
+    /*font-weight: 500;*/
+    font-size: 3.5rem;
+    line-height: 81.1%;
+    max-width: 30rem;
+    margin-bottom: 2rem !important;
+}
+
+#home-icons .rec-rotated {
     position: absolute;
-    top: 0;
+    left: 4rem;
+    top: 5rem;
+    width: 3.5rem;
+    height: 5.25rem;
+}
+
+#home-icons .rec-side {
+    position: absolute;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    top: -5rem;
+    width: 5.75rem;
+    height: 7.25rem;
+}
+
+#home-icons p {
+    color: var(--highlight-logo);
+}
+
+#home-icons .meditation {
+    width: 4rem;
+    height: 5rem;
+}
+
+#home-icons .hands {
+    width: 5rem;
+    height: 4rem;
+}
+
+#home-icons .bird {
+    width: 4rem;
+    height: 4.5rem;
+}
+
+#home-heading {
+    position: relative;
+    font-family: Cormorant, serif;
+    min-height: 7rem;
+    background: var(--home-heading-bg-color);
+    border-radius: 3rem;
+}
+
+#home-heading h1 {
+    max-width: 30rem;
+    font-size: 3rem;
+    line-height: 80%;
+    color: var(--menu-text-color);
+    font-weight: 500;
+    margin-bottom: 1.5rem !important;
+}
+
+#home-heading p {
+    color: var(--highlight-logo);
+    max-width: 43rem;
+    font-size: 1.3rem;
+}
+
+#home-heading .circles {
+    position: absolute;
+    left: 0;
+    top: -1.5rem;
 }
 
 #about-short .about-sh {
