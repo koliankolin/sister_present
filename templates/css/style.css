@@ -1,0 +1,227 @@
+:root {
+    --color-main: #fff;
+    --color-header: #CFFCEC;
+    --highlight-color: #649195;
+    --highlight-logo: #555555;
+    --header-bg-color: #CFFCEC;
+    --menu-text-color: #68618C;
+    --menu-item-bg-color: #EFC9B8;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.top-header {
+    min-height: 5.25rem;
+    justify-content: space-between;
+    align-items: center;
+
+    top: -115px;
+    background: var(--header-bg-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.logo {
+    color: var(--highlight-logo);
+}
+
+.logo .who, .contact .consult {
+    display: block;
+    font-family: Cormorant, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.35rem;
+    line-height: 2rem;
+}
+
+.logo .name {
+    font-family: Caveat, serif;
+    /*font-style: normal;*/
+    font-weight: 200;
+    font-size: 1.8rem;
+    letter-spacing: 0.01em;
+}
+
+.logo img {
+    width: 3rem;
+    margin-left: 0.02rem;
+    margin-top: 0.13rem;
+}
+
+.phone a {
+    display: inline-flex;
+}
+
+.contacts img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.contact .consult {
+    align-items: center;
+}
+
+.contacts {
+    display: inline-flex;
+}
+
+.contacts .phone {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--highlight-color);
+    line-height: 1.5rem;
+    align-content: center;
+}
+
+.navbar-toggler.collapsed .close-icon {
+    display: none;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    display: inline;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: var(--header-bg-color);
+    border-radius: 50%;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: var(--header-bg-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='5 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#555' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--menu-text-color);
+}
+
+.navbar .nav-link {
+    font-family: Cormorant, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 0.425rem;
+    margin: 0.5375rem;
+}
+
+.navbar-light .navbar-nav .active .nav-link,
+.navbar-light .navbar-nav .nav-link:hover {
+    background: var(--menu-item-bg-color);
+    max-width: 7rem;
+    color: var(--color-main);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+}
+
+.carousel-item {
+    height: 450px;
+}
+
+.carousel-image-1 {
+    background: url("../img/image1.jpg");
+    background-size: cover;
+}
+
+.carousel-image-2 {
+    background: url("../img/image2.jpg");
+    background-size: cover;
+}
+
+.carousel-image-3 {
+    background: url("../img/image3.jpg");
+    background-size: cover;
+}
+
+.carousel-caption .lead {
+    font-size: 2.7vh;
+}
+
+.carousel-caption .display-3 {
+    font-size: 6.2vh;
+}
+
+.top-header a{
+    color: var(--highlight-logo);
+    -webkit-transition:color .3s;
+    -o-transition:color .3s;
+    transition:color .3s;
+}
+
+.top-header a:hover,
+.top-header a.anchor{
+    text-decoration:none;
+}
+
+#home-heading {
+    position: relative;
+    min-height: 200px;
+    background: url("../img/lights.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#about-short .about-sh {
+    font-size: 3vh;
+}
+
+#page-header {
+    height: 150px;
+    background: url("../img/image1.jpg");
+    background-position: 0 -360px;
+    background-attachment: fixed;
+    color: #ffffff;
+    border-bottom: 1px #eee solid;
+    padding-top: 50px;
+}
+
+.about-img {
+    margin-top: -50px;
+}
+
+#accordion {
+    border: #444;
+}
+
+#faq a {
+    color: #000;
+    text-decoration: none;
+}
+
+#faq .card-body,
+#faq .card-header {
+    background: #fff;
+    color: #000;
+}
+
+#faq .card-body {
+    text-align: left;
+}
+
+#main-footer {
+    background: #000;
+    color: #fff;
+}
+
+[data-toggle="collapse"] i:before{
+    content: "\f146";
+}
+
+[data-toggle="collapse"].collapsed i:before{
+    content: "\f0fe";
+}
