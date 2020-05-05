@@ -3,7 +3,7 @@
     --color-header: #CFFCEC;
     --highlight-color: #649195;
     --highlight-logo: #555555;
-    --header-bg-color: #CFFCEC;
+    --header-bg-color: #d9ece0;
     --menu-text-color: #68618C;
     --menu-item-bg-color: #EFC9B8;
     --home-heading-bg-color: #F7F1DD;
@@ -11,6 +11,7 @@
 
 body {
     overflow-x: hidden;
+    background: #f9f2eb;
 }
 
 .top-header {
@@ -153,6 +154,11 @@ body {
     margin-bottom: 5rem;
 }
 
+#showcase .carousel-inner {
+    /*max-width: 90%;*/
+    border-radius: 3rem;
+}
+
 .blockquote {
     font-size: 1.5rem;
     margin-top: -50px;
@@ -226,11 +232,13 @@ body {
 }
 
 #home-heading {
+    max-width: 80%;
     position: relative;
     font-family: Cormorant, serif;
     min-height: 7rem;
     background: var(--home-heading-bg-color);
     border-radius: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 #home-heading h1 {
@@ -254,8 +262,149 @@ body {
     top: -1.5rem;
 }
 
-#about-short .about-sh {
-    font-size: 3vh;
+
+#online .description {
+    font-family: Cormorant, serif;
+    font-weight: 500;
+    width: 22rem;
+    height: 22rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 3rem;
+    margin-left: 19rem;
+}
+
+#online h3 {
+    color: var(--menu-text-color);
+    font-size: 2.5rem;
+    width: 15rem;
+    line-height: 81.1%;
+}
+
+#online .button {
+    width: 19rem;
+    height: 8rem;
+    border-radius: 3rem;
+    background: var(--menu-item-bg-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    margin-left: -6rem;
+    margin-top: 18rem;
+}
+
+#online .button a {
+    font-family: Cormorant, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 81.1%;
+
+    width: inherit;
+    height: inherit;
+    text-transform: none;
+    text-decoration: none;
+    color: var(--color-main);
+}
+
+#online .button:hover {
+    background: var(--highlight-logo);
+}
+
+#online .button span {
+    display: block;
+}
+
+#online {
+    position: relative;
+}
+
+#online .bg-rec {
+    position: absolute;
+    width: 3.5rem;
+    height: 5.25rem;
+}
+
+#online .rotated {
+    right: 0;
+    top: 60px;
+    width: 30%;
+    height: 80%;
+    max-width: 600px;
+    transform: rotate(180deg);
+}
+
+#online .rotated-1 {
+    width: 20%;
+    height: 60%;
+    left: 5rem;
+    top: 0;
+    transform: rotate(120deg);
+    opacity: 0.4;
+}
+
+#online .rotated-2 {
+    right: 8rem;
+    top: 20rem;
+    transform: rotate(75deg);
+}
+
+
+#online .arrow-online {
+    width: 16rem;
+    height: 10rem;
+    position: absolute;
+    top: 20rem;
+    left: 51rem;
+}
+
+#about-short {
+    position: relative;
+    background: var(--menu-text-color);
+    border-radius: 3rem;
+    max-width: 90%;
+}
+
+#about-short .about-header {
+    font-size: 3rem;
+    line-height: 70%;
+
+    font-family: Caveat, serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#about-short .about-who {
+    font-size: 1.5rem;
+
+    display: block;
+    font-family: Cormorant, serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#about-short .about-desc {
+    font-size: 1.1rem;
+
+    font-family: Cormorant, serif;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 15%;
+}
+
+#about-short button {
+    margin-left: 40%;
+}
+
+#about-short .about-img {
+    position: relative;
+    /*background: url("../img/bg/circles_about.png");*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+}
+
+#about-short .about-img-cov {
+    position: absolute;
+    right: 0;
+    top: -1rem;
 }
 
 #page-header {

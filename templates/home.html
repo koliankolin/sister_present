@@ -22,7 +22,7 @@
       <div class="logo ml-3">
         <a href="/">
           <span class="who">Аналитический психолог</span>
-          <span class="name">Наталья Горчакова</span><img src="img/icons/logo_line.png" alt="">
+          <span class="name">Наталья Горчакова</span><img src="img/bg/logo_line.png" alt="">
         </a>
       </div>
       <div class="contact">
@@ -85,7 +85,7 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner">
+      <div class="carousel-inner m-auto">
         <div class="carousel-item carousel-image-1 active">
           <div class="container">
             <div class="carousel-caption d-sm-block mb-10">
@@ -133,23 +133,22 @@
             </div>
           </div>
         </div>
+        <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+
+        <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
       </div>
-
-      <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-
-      <a href="#myCarousel" data-slide="next" class="carousel-control-next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
     </div>
   </section>
 
   <!--- Home section -->
   <section id="home-icons" class="mt-5 pt-5 pb-3">
     <div class="container">
-      <img class="rec-rotated d-none d-md-block" src="img/icons/rec_rotated.png" alt="">
-      <img class="rec-side d-none d-md-block" src="img/icons/rec_side.png" alt="">
+      <img class="rec-rotated d-none d-md-block" src="img/bg/rec_rotated.png" alt="">
+      <img class="rec-side d-none d-md-block" src="img/bg/rec_side.png" alt="">
       <h2 class="text-center m-auto">Если вы чувствуете, что готовы:</h2>
       <div class="row">
         <div class="col-md-4 mb-4 text-center">
@@ -174,11 +173,11 @@
   </section>
 
   <!-- Home heading section -->
-  <section id="home-heading" class="p-5 text-center d-none d-sm-block">
+  <section id="home-heading" class="p-5 m-auto text-center d-none d-sm-none d-sm-block d-md-block">
       <div class="row">
         <div class="col">
           <div class="container">
-            <img class="circles" src="img/icons/circles.png" alt="">
+            <img class="circles" src="img/bg/circles.png" alt="">
             <h1 class="m-auto">Готовы изменить свою жизнь к лучшему?</h1>
             <p class="m-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum debitis distinctio enim facere iusto ratione sequi! Asperiores itaque, iure.</p>
           </div>
@@ -187,39 +186,53 @@
   </section>
 
   <!-- Info section -->
-  <section id="info" class="py-3">
-    <div class="container">
+  <section id="online" class="pb-5 pt-5 d-none d-sm-block">
       <div class="row">
-        <div class="col-md-6 m-auto text-center">
-          <h3>Возможны консультации онлайн</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda at dignissimos minus omnis quasi sunt. Iusto praesentium repellendus voluptate?</p>
-          <a href="#" class="btn btn-outline-danger btn-lg">Записаться онлайн</a>
+        <img class="bg-rec rotated" src="img/bg/shape-light-coral-edge.svg" alt="">
+        <img class="bg-rec rotated-1" src="img/bg/shape-lilac.svg" alt="">
+<!--        <img class="bg-rec rotated-2" src="img/bg/rec_rotated.png" alt="">-->
+        <div class="card description">
+            <h3 class="text-center m-auto">Возможны консультации онлайн</h3>
         </div>
-        <div class="col-md-6">
-          <img src="img/laptop.png" alt="" class="img-fluid">
+
+        <div class="card button">
+          <a href="#" class="text-center"><span class="my-4">Записаться онлайн!</span></a>
         </div>
       </div>
-    </div>
   </section>
 
+<!--Online section mobile-->
+<!--  <section id="online-mob" class="py-3 d-block d-sm-none">-->
+<!--    <div class="row">-->
+<!--      <div class="card description">-->
+<!--        &lt;!&ndash;            <div class="card-body">&ndash;&gt;-->
+<!--        <h3 class="text-center m-auto">Возможны консультации онлайн</h3>-->
+<!--        &lt;!&ndash;            </div>&ndash;&gt;-->
+<!--      </div>-->
+
+
+<!--      <div class="card button">-->
+<!--        <a href="#">-->
+<!--          Записаться онлайн!-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
 <!--  About short-->
-<section id="about-short" class="bg-light text-dark py-3">
+<section id="about-short" class="text-white py-3 m-auto">
   <div class="container">
 <!--    <h2 class="text-center mb-5">Несколько слов обо мне</h2>-->
     <div class="row">
-      <div class="col-md-6 m-auto text-center">
-        <img src="img/person1.jpg" alt="" class="rounded-circle">
-        <h3>Наталья Горчакова</h3>
-        <p><em>Психоаналитик</em></p>
+      <div class="col text-left">
+        <h2 class="about-header mt-4">Наталья Горчакова</h2>
+        <span class="about-who mb-4">Психоаналитик</span>
+        <p class="about-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aut autem, blanditiis cum dolor eius eligendi eos et eveniet neque numquam officiis, perferendis quas quidem sint unde. Unde, veritatis?</p>
+        <button class="btn">Узнать подробнее</button>
+        <img class="about-img-cov d-none d-sm-block" src="img/bg/circles.png" alt="">
       </div>
-      <div class="col-md-6 m-auto text-left about-sh">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aut autem, blanditiis cum dolor eius eligendi eos et eveniet neque numquam officiis, perferendis quas quidem sint unde. Unde, veritatis?</p>
 
-        <div align="center">
-          <a href="about.html" class="btn btn-outline-success btn-med text-align-center">Подробнее</a>
-        </div>
 
-      </div>
     </div>
   </div>
 </section>
