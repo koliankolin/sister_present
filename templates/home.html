@@ -238,24 +238,41 @@
 </section>
 
 <!--  Newsletter-->
-  <section id="newsletter" class="text-center p-5 bg-dark text-white">
-    <div class="container">
+  <section id="newsletter" class="text-center my-5 text-dark">
+<!--    <div class="container">-->
       <div class="row">
-        <div class="col">
-          <h1>Запишитесь на пробную сессию</h1>
-          <p class="d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad blanditiis maxime nisi nulla perspiciatis provident, reiciendis reprehenderit rerum suscipit.</p>
-          <form action="" class="form-inline justify-content-center">
-            <input type="text" class="form-control mb-2 mr-2" placeholder="Имя">
-            <input type="text" class="form-control mb-2 mr-2" placeholder="+7 999 999 99 99" type="tel">
-            <select class="form-control mb-2 mr-2" id="exampleFormControlSelect1">
-              <option>Очно</option>
-              <option>Онлайн</option>
-            </select>
-            <button class="btn btn-primary btn-lg mb-2">Записаться</button>
-          </form>
+        <div class="col-md-6 mr-auto main-cart">
+          <div class="card m-5 p-3 main-form-content">
+            <h1 class="mb-3">Где проходят встречи</h1>
+            <img src="img/map.png" class="card-img-top d-none d-sm-block" alt="">
+            <div class="card-body">
+              <p>г. Москва, ул. Улица Улицевых, дом. 34, офис 456</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 main-form ml-auto">
+          <div class="card m-5 p-3 main-form-content">
+            <h1 class="mb-3">Запись на сессию</h1>
+            <form action="">
+              <div class="form-group col-auto">
+                <input type="text" class="form-control mb-2 mr-2" placeholder="Имя">
+              </div>
+              <div class="form-inline justify-content-center">
+                <input type="text" class="form-control mb-2 mr-2" placeholder="+7 999 999 99 99" type="tel">
+                <select class="form-control mb-2 mr-2" id="exampleFormControlSelect1">
+                  <option>Очно</option>
+                  <option>Онлайн</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button class="btn m-auto">Записаться</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+<!--    </div>-->
   </section>
 
 
@@ -264,9 +281,22 @@
 
   <footer id="main-footer" class="text-center p-4">
     <div class="container">
-      <div class="row">
-        <div class="col">
+      <div class="row socials">
+        <div class="sign">
           <p>&copy; <span id="year"></span> Наталья Горчакова</p>
+        </div>
+        <div class="social">
+            <a href="#">
+              <span class="icons d-block mr-3">
+                <i class="fa fa-instagram"></i>
+              </span>
+            </a>
+
+            <a href="#">
+              <span class="icons d-block">
+                <i class="fa fa-facebook"></i>
+              </span>
+            </a>
         </div>
       </div>
     </div>
@@ -278,6 +308,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/0e94bf415a.js" crossorigin="anonymous"></script>
   <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());

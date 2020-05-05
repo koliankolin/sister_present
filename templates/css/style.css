@@ -7,6 +7,7 @@
     --menu-text-color: #68618C;
     --menu-item-bg-color: #EFC9B8;
     --home-heading-bg-color: #F7F1DD;
+    --footer-bg-color: rgba(212, 185, 157, 0.71);
 }
 
 body {
@@ -302,11 +303,15 @@ body {
     height: inherit;
     text-transform: none;
     text-decoration: none;
-    color: var(--color-main);
+    color: var(--highlight-logo);
 }
 
 #online .button:hover {
     background: var(--highlight-logo);
+}
+
+#online .button a:hover {
+    color: var(--color-main);
 }
 
 #online .button span {
@@ -391,7 +396,22 @@ body {
 }
 
 #about-short button {
-    margin-left: 40%;
+    margin-left: 30%;
+
+    width: 12rem;
+    height: 3rem;
+
+    font-size: 1.3rem;
+    background: var(--menu-item-bg-color);
+    color: var(--highlight-logo);
+    font-family: Cormorant, serif;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+}
+
+#about-short button:hover {
+    background: var(--highlight-logo);
+    color: var(--color-main);
 }
 
 #about-short .about-img {
@@ -415,6 +435,65 @@ body {
     color: #ffffff;
     border-bottom: 1px #eee solid;
     padding-top: 50px;
+}
+
+#newsletter .main-form{
+    background: var(--home-heading-bg-color);
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    max-width: 30rem;
+    max-height: 25rem;
+}
+
+#newsletter .main-cart {
+    background: var(--home-heading-bg-color);
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    max-width: 800px;
+}
+
+#newsletter .main-form-content {
+    background: var(--color-main);
+    /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);*/
+    border-radius: 1.5rem;
+}
+
+#newsletter h1 {
+    color: var(--menu-text-color);
+    font-size: 3rem;
+    line-height: 80%;
+
+    font-family: Caveat, serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#newsletter button {
+    display: block;
+    width: 12rem;
+    height: 3.5rem;
+
+    font-size: 1.5rem;
+
+    background: var(--menu-item-bg-color);
+    color: var(--highlight-logo);
+    font-family: Cormorant, serif;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+}
+
+#newsletter button:hover {
+    background: var(--highlight-logo);
+    color: var(--color-main);
+}
+
+#newsletter .card-body p {
+    font-family: Cormorant, serif;
+    color: var(--highlight-logo);
+    max-width: 43rem;
+    font-size: 1.6rem;
 }
 
 .about-img {
@@ -441,8 +520,23 @@ body {
 }
 
 #main-footer {
-    background: #000;
-    color: #fff;
+    background: var(--footer-bg-color);
+    color: var(--highlight-logo);
+    font-family: Caveat, serif;
+    font-size: 1.5rem;
+}
+
+#main-footer .icons {
+    color: var(--highlight-logo);
+    font-size: 2rem;
+}
+
+#main-footer .socials {
+    justify-content: space-between;
+}
+
+#main-footer .social {
+    display: inline-flex;
 }
 
 [data-toggle="collapse"] i:before{
