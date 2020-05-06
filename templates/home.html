@@ -238,13 +238,12 @@
 </section>
 
 <!--  Newsletter-->
-  <section id="newsletter" class="text-center my-5 text-dark">
-<!--    <div class="container">-->
+  <section id="newsletter" class="text-center my-5 d-none d-sm-block">
       <div class="row">
         <div class="col-md-6 mr-auto main-cart">
           <div class="card m-5 p-3 main-form-content">
             <h1 class="mb-3">Где проходят встречи</h1>
-            <img src="img/map.png" class="card-img-top d-none d-sm-block" alt="">
+            <img src="img/map.png" class="card-img-top" alt="">
             <div class="card-body">
               <p>г. Москва, ул. Улица Улицевых, дом. 34, офис 456</p>
             </div>
@@ -259,7 +258,7 @@
                 <input type="text" class="form-control mb-2 mr-2" placeholder="Имя">
               </div>
               <div class="form-inline justify-content-center">
-                <input type="text" class="form-control mb-2 mr-2" placeholder="+7 999 999 99 99" type="tel">
+                <input type="tel" class="form-control mb-2 mr-2" placeholder="+7 999 999 99 99">
                 <select class="form-control mb-2 mr-2" id="exampleFormControlSelect1">
                   <option>Очно</option>
                   <option>Онлайн</option>
@@ -272,7 +271,41 @@
           </div>
         </div>
       </div>
-<!--    </div>-->
+  </section>
+
+<!--Newsletters Mobile-->
+  <section id="newsletter-mobile" class="text-center my-5 d-block d-sm-none">
+    <div class="row">
+      <div class="col-md-6 mr-auto main-cart">
+        <div class="card m-3 p-3 main-form-content">
+          <h1 class="mb-3">Где проходят встречи</h1>
+          <div class="card-body">
+            <p>г. Москва, ул. Улица Улицевых, дом. 34, офис 456</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 main-form ml-auto">
+        <div class="card m-3 p-3 main-form-content">
+          <h1 class="mb-3">Запись на сессию</h1>
+          <form action="">
+            <div class="form-group col-auto">
+              <input type="text" class="form-control mb-2 mr-2" placeholder="Имя">
+            </div>
+            <div class="form-inline justify-content-center">
+              <input type="tel" class="form-control mb-2 mr-2" placeholder="+7 999 999 99 99">
+              <select class="form-control mb-2 mr-2" id="exampleFormControlSelect2">
+                <option>Очно</option>
+                <option>Онлайн</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button class="btn m-auto">Записаться</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
 
