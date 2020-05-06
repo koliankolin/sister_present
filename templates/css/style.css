@@ -181,14 +181,16 @@ body {
     text-decoration:none;
 }
 
-#home-icons {
+#home-icons,
+#about {
     color: var(--menu-text-color);
     font-family: Cormorant, serif;
     text-align: center;
     position: relative;
 }
 
-#home-icons h2 {
+#home-icons h2,
+#about h2 {
     font-style: normal;
     /*font-weight: 500;*/
     font-size: 3.5rem;
@@ -502,11 +504,48 @@ body {
 }
 
 .about-img {
-    margin-top: -50px;
+    margin-top: -3rem;
+    max-width: 30rem;
+    height: 30rem;
+}
+
+#about p {
+    color: var(--highlight-logo);
+    font-size: 1rem;
+}
+
+#faq h2 {
+    color: var(--menu-text-color);
+    font-family: Cormorant, serif;
+    font-size: 3.5rem;
+    line-height: 81%;
+    max-width: 40rem;
 }
 
 #accordion {
     border: #444;
+}
+
+#accordion .radius {
+    border-radius: 2rem;
+}
+
+#testimonials {
+    background: var(--menu-text-color);
+    max-width: 90%;
+    border-radius: 3rem;
+}
+
+#testimonials .testimonials-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#testimonials h2 {
+    font-family: Cormorant, serif;
+    font-size: 3.5rem;
+    line-height: 81%;
+    max-width: 40rem;
 }
 
 #faq a {
