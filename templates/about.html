@@ -62,7 +62,7 @@
                     <li class="nav-item">
                         <a href="home.html" class="nav-link">Главная</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item active m-auto">
                         <a href="about.html" class="nav-link">Обо мне</a>
                     </li>
                     <li class="nav-item">
@@ -103,7 +103,7 @@
     </section>
 
 <!--    Icon boxes-->
-    <section id="faq" class="py-4 pl-2 pr-2 bg-light text-dark rounded">
+    <section id="faq" class="py-4 pl-2 pr-2 text-dark rounded">
         <div class="container">
             <h2 class="text-center m-auto">Проходила обучение <span class="d-none d-sm-block">в следующих организациях</span></h2>
             <div class="row mt-3">
@@ -245,54 +245,88 @@
         </div>
     </section>
 
+
+
 <!--    Testimonials-->
-    <section class="bg-light py-3">
-            <div id="testimonials" class="p-4 m-auto text-white">
-                <div class="container">
-                    <h2 class="text-center">Отзывы</h2>
-                        <div class="col slider">
-                            <div class="row">
-                                <div class="col mr-auto">
-                                    <img src="img/person1.jpg" class="rounded-circle" alt="">
+    <section id="testimonials" class="p-4 mb-4 text-white text-center m-auto">
+            <h2 class="">Отзывы</h2>
+<!--            <div class="row text-center">-->
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+<!--                            <div class="container">-->
+                                <div class="row justify-content-center">
+                                    <div class="col-md-4">
+                                        <img class="rounded-circle" src="img/person1.jpg" alt="">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <blockquote class="blockquote mt-5 text-center">
+                                            <p class="mb-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quaerat.
+                                            </p>
+                                            <footer class="blockquote-footer">John Doe</footer>
+                                            <div class="social">
+                                                <a href="#">
+                                                  <span class="icons d-block mr-3">
+                                                    <i class="fa fa-instagram"></i>
+                                                  </span>
+                                                </a>
+
+                                                <a href="#">
+                                                  <span class="icons d-block">
+                                                    <i class="fa fa-facebook"></i>
+                                                  </span>
+                                                </a>
+                                            </div>
+                                        </blockquote>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <blockquote class="blockquote">
+                        </div>
+
+                        <div class="carousel-item">
+                            <!--                            <div class="container">-->
+                            <div class="row justify-content-center">
+                                <div class="col-md-4">
+                                    <img class="rounded-circle" src="img/person1.jpg" alt="">
+                                </div>
+                                <div class="col-md-4">
+                                    <blockquote class="blockquote mt-5 text-center">
                                         <p class="mb-0">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, molestiae.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quaerat.
                                         </p>
-                                        <footer class="blockquote-footer">Sam Smith From
-                                            <cite title="Company 2">Company 2</cite>
-                                        </footer>
+                                        <footer class="blockquote-footer">John Doe</footer>
+                                        <div class="social">
+                                            <a href="#">
+                                                  <span class="icons d-block mr-3">
+                                                    <i class="fa fa-instagram"></i>
+                                                  </span>
+                                            </a>
 
-                                    </blockquote>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col">
-                                    <img src="img/person1.jpg" class="rounded-circle" alt="">
-                                </div>
-                                <div class="col-md-8 ml-auto testimonials-content">
-                                    <blockquote class="blockquote">
-                                        <p class="mb-0">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, molestiae.
-                                        </p>
-                                        <footer class="blockquote-footer">Sam Smith From
-                                            <cite title="Company 2">Company 2</cite>
-                                        </footer>
-
+                                            <a href="#">
+                                                  <span class="icons d-block">
+                                                    <i class="fa fa-facebook"></i>
+                                                  </span>
+                                            </a>
+                                        </div>
                                     </blockquote>
                                 </div>
                             </div>
                         </div>
-                    </div>
-        <!--        </div>-->
-            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                </div>
     </section>
 
 <!--    Footer-->
 
-    <footer id="main-footer" class="text-center p-4">
+    <footer id="main-footer" class="text-center p-4 mt-4">
         <div class="container">
             <div class="row socials">
                 <div class="sign">
@@ -328,10 +362,18 @@
         // Get the current year for the copyright
         $('#year').text(new Date().getFullYear());
 
+        // Configure carousel
+        $('.carousel').carousel({
+            interval: 6000,
+            pause: 'hover'
+        })
+
         $('.slider').slick({
+            slide: 'div',
            infinite: true,
            slideToShow: 1,
-           slideToScroll: 1
+           slideToScroll: 1,
+           adaptiveHeight: true
         });
     </script>
 </body>
