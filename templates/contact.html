@@ -9,74 +9,143 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha256-etrwgFLGpqD4oNAFW08ZH9Bzif5ByXK2lXNHKy7LQGo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha256-3h45mwconzsKjTUULjY+EoEkoRhXcOIU4l5YAw2tSOU=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Cormorant:ital,wght@0,300;0,500;0,600;1,300;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Bootstrap Theme</title>
 </head>
 
 <body>
-    <header class="mb-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 ml-3">
-                    <a href="home.html" class="logo">Наталья <br/>Горчакова <span>Аналитический психолог</span></a>
-                </div>
-                <div class="col-xs-6 ml-auto mr-4 mt-4">
-                    <div class="consult">
-                        <div class="skype"></div><a href="skype:natalia477399?call">Консультация по SKYPE</a>
+<header>
+    <div class="container">
+        <div class="row top-header">
+            <div class="logo ml-3">
+                <a href="/">
+                    <span class="who">Аналитический психолог</span>
+                    <span class="name">Наталья Горчакова</span><img src="img/bg/logo_line.png" alt="">
+                </a>
+            </div>
+            <div class="contact">
+                <span class="consult text-center d-none d-md-block">Консультация</span>
+                <div class="contacts mr-2">
+                    <div class="phone">
+                        <a href="tel:79261723878">
+                            <img src="img/icons/phone.png" alt=""><span class="d-none d-md-block">+7 926 172 38 78</span>
+                        </a>
                     </div>
-                    <div class="contact">
-                        <a href="tel:79261723878">+7 926 172 38 78</a>
-                        <a href="mailto:patience@list.ru">patience@list.ru</a>
+                    <div class="other ml-2 mr-2">
+                        <div class="skype">
+                            <a href="mailto:patience@list.ru"><img src="img/icons/skype.png" alt=""></a>
+                        </div>
                     </div>
+                    <div class="email">
+                        <a href="mailto:patience@list.ru"><img src="img/icons/email.png" alt=""></a>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </header><!-- header -->
+    </div>
+</header><!-- header -->
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="home.html" class="nav-link">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link">Обо мне</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="blog.html" class="nav-link">Статьи</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="contact.html" class="nav-link">Контакты</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="faq.html" class="nav-link">Вопросы</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light my-2">
+    <div class="container">
+        <button class="navbar-toggler collapsed border-0 ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon m-auto"></span>
+            <div class="close-icon py-1">✖</div>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarCollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item m-auto">
+                    <a href="home.html" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item m-auto">
+                    <a href="about.html" class="nav-link">Обо мне</a>
+                </li>
+                <li class="nav-item m-auto">
+                    <a href="blog.html" class="nav-link">Статьи</a>
+                </li>
+                <li class="nav-item active m-auto">
+                    <a href="contact.html" class="nav-link">Контакты</a>
+                </li>
+                <li class="nav-item m-auto">
+                    <a href="faq.html" class="nav-link">Вопросы</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <header id="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 m-auto text-center">
-                    <h1>Контакты</h1>
-                </div>
-            </div>
-        </div>
-    </header>
 <!--  contact section  -->
-    <section id="contact" class="py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card p-4">
-                        <div class="card-body">
+    <section id="contact" class="py-3 d-none d-sm-block">
+        <img class="bg-rec rotated" src="img/bg/shape-light-coral-edge.svg" alt="">
+        <img class="bg-rec rotated-1" src="img/bg/shape-lilac.svg" alt="">
+        <h1 class="text-center mb-5">Контакты</h1>
+        <div class="row mb-3">
+            <div class="col-md-6 main-cart p-4">
+                <div class="card p-2 main-form-content">
+                    <div class="card-body text-center">
+                        <h4>Адрес Офиса</h4>
+                        <p>г. Москва, ул. Рублевская, д. 1</p>
+                        <h4>Email</h4>
+                        <p>patience@list.ru</p>
+                        <h4>Телефон</h4>
+                        <p>+7 (926) 172-38-78</p>
+                        <h4>Skype</h4>
+                        <p>natalia477399</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7 ml-auto main-form">
+                <div class="card form-content m-4">
+                    <div class="card-body">
+                        <h4 class="text-center">Запись на сессию</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Имя">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="+7 999 999 99 99">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 m-auto">
+                                <div class="form-group">
+                                    <select class="form-control mb-2 mr-2" id="exampleFormControlSelect1">
+                                        <option>Очно</option>
+                                        <option>Онлайн</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col m-auto">
+                            <div class="form-group m-auto">
+                                <button class="btn btn-block m-auto">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <section id="contact-mobile" class="py-3 d-block d-sm-none">
+            <h1 class="text-center mb-5">Контакты</h1>
+            <div class="row mb-3">
+                <div class="col-md-6 main-cart p-4">
+                    <div class="card p-2 main-form-content">
+                        <div class="card-body text-center">
                             <h4>Адрес Офиса</h4>
                             <p>г. Москва, ул. Рублевская, д. 1</p>
                             <h4>Email</h4>
@@ -88,10 +157,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7">
-                    <div class="card p-4">
+
+                <div class="col-md-7 ml-auto main-form">
+                    <div class="card form-content m-4">
                         <div class="card-body">
-                            <h3 class="text-center">Запись на сессию</h3>
+                            <h4 class="text-center">Запись на сессию</h4>
                             <hr>
                             <div class="row">
                                 <div class="col-md-6">
@@ -116,25 +186,37 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-8 m-auto">
-                                <div class="form-group">
-                                    <button class="btn btn-danger btn-block">Записаться</button>
+                            <div class="col m-auto">
+                                <div class="form-group m-auto">
+                                    <button class="btn btn-block m-auto">Записаться</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!--    Footer-->
+            <!--    Footer-->
 
-    <footer id="main-footer" class="text-center p-4">
+    <footer id="main-footer" class="text-center p-4 mt-4">
         <div class="container">
-            <div class="row">
-                <div class="col">
+            <div class="row socials">
+                <div class="sign">
                     <p>&copy; <span id="year"></span> Наталья Горчакова</p>
+                </div>
+                <div class="social">
+                    <a href="#">
+                          <span class="icons d-block mr-3">
+                            <i class="fa fa-instagram"></i>
+                          </span>
+                    </a>
+
+                    <a href="#">
+                          <span class="icons d-block">
+                            <i class="fa fa-facebook"></i>
+                          </span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -146,6 +228,9 @@
             crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha256-zUQGihTEkA4nkrgfbbAM1f3pxvnWiznBND+TuJoUv3M=" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/0e94bf415a.js" crossorigin="anonymous"></script>
     <script>
         // Get the current year for the copyright
         $('#year').text(new Date().getFullYear());
