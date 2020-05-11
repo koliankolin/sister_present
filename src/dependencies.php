@@ -1,5 +1,7 @@
 <?php
 use Slim\Factory\AppFactory;
+use Slim\Views\Twig;
+use Slim\Views\TwigMiddleware;
 
 $container = new \DI\Container();
 AppFactory::setContainer($container);
@@ -15,3 +17,9 @@ $capsule->bootEloquent();
 $container->set('db', function () use ($capsule){
     return $capsule;
 });
+
+$container->set('view', function() use($settings) {
+    return Twig::create($settings['renderer']['template_path']);
+});
+
+$app->add(TwigMiddleware::createFromContainer($app));

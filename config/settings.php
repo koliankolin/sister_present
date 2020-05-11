@@ -2,7 +2,7 @@
 return [
         // Renderer settings
         'renderer' => [
-            'template_path' => __DIR__ . '/../templates/',
+            'template_path' => __DIR__ . '/../templates/html',
         ],
 
         'db' => [

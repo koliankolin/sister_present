@@ -8,7 +8,7 @@ class LeadMigration extends Migration
         $this->schema->create('leads', function(Illuminate\Database\Schema\Blueprint $table){
             // Auto-increment id
             $table->increments('id');
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->string('name');
             $table->string('session_type');
             // Required for Eloquent's created_at and updated_at columns

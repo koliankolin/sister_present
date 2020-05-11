@@ -127,11 +127,11 @@ body {
 }
 
 .carousel-image-1 {
-    /*background: url("../img/girl_lavender.jpg");*/
+    /*background: url("/templates/img/girl_lavender.jpg");*/
     background: linear-gradient(
             rgba(20,20,20, .5),
             rgba(20,20,20, .5)),
-        url("../img/girl_lavender.jpg");
+        url("/templates/img/girl_lavender.jpg");
     background-size: cover;
 }
 
@@ -139,7 +139,7 @@ body {
     background: linear-gradient(
             rgba(20,20,20, .5),
             rgba(20,20,20, .5)),
-    url("../img/lotos.jpg");
+    url("/templates/img/lotos.jpg");
     background-size: cover;
 }
 
@@ -147,7 +147,7 @@ body {
     background: linear-gradient(
             rgba(20,20,20, .5),
             rgba(20,20,20, .5)),
-    url("../img/flowers.jpg");
+    url("/templates/img/flowers.jpg");
     background-size: cover;
 }
 
@@ -419,7 +419,7 @@ body {
 
 #about-short .about-img {
     position: relative;
-    /*background: url("../img/bg/circles_about.png");*/
+    /*background: url("/templates/img/bg/circles_about.png");*/
     /*background-size: cover;*/
     /*background-repeat: no-repeat;*/
 }
@@ -432,7 +432,7 @@ body {
 
 #page-header {
     height: 150px;
-    background: url("../img/image1.jpg");
+    background: url("/templates/img/image1.jpg");
     background-position: 0 -360px;
     background-attachment: fixed;
     color: #ffffff;
