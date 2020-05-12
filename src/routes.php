@@ -22,7 +22,7 @@ $app->post('/', function (Request $req, Response $res) {
             $lead->set($key, $value);
             $lead->save();
         } catch (\Exception $e) {
-            return $res->withStatus(500, "Invalid attribute {$key}");
+            //return $res->withStatus(500, "Invalid attribute {$key}");
         }
     }
     return $res;

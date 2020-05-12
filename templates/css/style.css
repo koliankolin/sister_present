@@ -10,9 +10,13 @@
     --footer-bg-color: rgba(212, 185, 157, 0.71);
 }
 
-body {
+body, html {
     overflow-x: hidden;
     background: #f9f2eb;
+}
+
+body {
+    position: relative;
 }
 
 .top-header {
