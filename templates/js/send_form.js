@@ -3,6 +3,30 @@ let imported = document.createElement('script');
 imported.src = 'https://unpkg.com/axios/dist/axios.min.js';
 document.head.appendChild(imported);
 
+const isMobile = window.screen.width < 800;
+
+let mainFormContentElems = document.getElementsByClassName('main-form-content');
+let elemToFill = (isMobile) ? mainFormContentElems[3] : mainFormContentElems[1];
+
+elemToFill.innerHTML = `
+<form id="mainForm">
+            <h1 class="mb-3">Запись на сессию</h1>
+            <div class="form-group col-auto">
+              <input type="text" class="form-control mb-2 mr-2" placeholder="Имя" name="name">
+            </div>
+            <div class="form-inline justify-content-center">
+              <input type="tel" class="form-control mb-2 mr-2" placeholder="+7 999 999 99 99" name="phone">
+              <select class="form-control mb-2 mr-2" id="exampleFormControlSelect" name="session_type">
+                <option value="in_place">Очно</option>
+                <option value="online">Онлайн</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button class="btn m-auto" type="submit">Записаться</button>
+            </div>
+          </form>
+`;
+
 checkName = name => {
     const patternName = /^[a-zA-Zа-яА-Я]+$/;
     return patternName.test(name);
@@ -80,14 +104,13 @@ addDangerElement = text => {
 };
 
 changeFormToThanks = function() {
-    let formElem = document.getElementsByClassName('main-form-content')[1];
     let elemThanks = document.createElement('h1');
     elemThanks.className = 'm-5';
     elemThanks.textContent = 'Спасибо за запись!';
-    while (formElem.lastElementChild) {
-        formElem.removeChild(formElem.lastElementChild);
+    while (elemToFill.lastElementChild) {
+        elemToFill.removeChild(elemToFill.lastElementChild);
     }
-    formElem.appendChild(elemThanks)
+    elemToFill.appendChild(elemThanks)
 };
 
 form.addEventListener('submit', (e) => {
