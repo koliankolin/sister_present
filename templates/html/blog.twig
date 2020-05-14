@@ -1,0 +1,75 @@
+{% extends "layouts/main_layout.twig" %}
+
+{% block title %}Наталья Горчакова{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+<body>
+{% block mainHeader %}
+    {{ parent() }}
+{% endblock %}
+{% block nav %}
+    {{ parent() }}
+{% endblock %}
+
+<!--    Blog-->
+    <section id="blog" class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card-columns">
+                        <div class="card">
+                            <img src="https://source.unsplash.com/random/301x200/" alt="" class="img-fluid card-img-top rounded-pill">
+                            <div class="card-body">
+                                <h4 class="card-title">Post One</h4>
+                                <small class="text-muted">Автор: Наталья Горчакова</small>
+                                <hr>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid aspernatur fugiat iure labore minima, modi mollitia nam possimus quasi quia, recusandae suscipit tempore veritatis! Atque corporis repudiandae suscipit!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="https://source.unsplash.com/random/302x200/" alt="" class="img-fluid card-img-top">
+                            <div class="card-body">
+                                <h4 class="card-title">Post Two</h4>
+                                <small class="text-muted">Автор: Наталья Горчакова</small>
+                                <hr>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid aspernatur fugiat iure labore minima, modi mollitia nam possimus quasi quia, recusandae suscipit tempore veritatis! Atque corporis repudiandae suscipit!</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="https://source.unsplash.com/random/300x200/" alt="" class="img-fluid card-img-top">
+                            <div class="card-body">
+                                <h4 class="card-title">Post Three</h4>
+                                <small class="text-muted">Автор: Наталья Горчакова</small>
+                                <hr>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid aspernatur fugiat iure labore minima, modi mollitia nam possimus quasi quia, recusandae suscipit tempore veritatis! Atque corporis repudiandae suscipit!</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    Footer-->
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+
+    {% block mainScripts %}
+        {{ parent() }}
+    {% endblock %}
+
+<script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear());
+    </script>
+</body>
+
+</html>
+{% endblock %}

@@ -10,7 +10,7 @@ let elemToFill = (isMobile) ? mainFormContentElems[3] : mainFormContentElems[1];
 
 elemToFill.innerHTML = `
 <form id="mainForm">
-            <h1 class="mb-3">Запись на сессию</h1>
+            <h4 class="mb-3">Запись на сессию</h4>
             <div class="form-group col-auto">
               <input type="text" class="form-control mb-2 mr-2" placeholder="Имя" name="name">
             </div>
@@ -104,7 +104,7 @@ addDangerElement = text => {
 };
 
 changeFormToThanks = function() {
-    let elemThanks = document.createElement('h1');
+    let elemThanks = document.createElement('h4');
     elemThanks.className = 'm-5';
     elemThanks.textContent = 'Спасибо за запись!';
     while (elemToFill.lastElementChild) {

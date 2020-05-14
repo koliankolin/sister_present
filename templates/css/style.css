@@ -462,14 +462,18 @@ body {
 }
 
 #newsletter .main-form-content,
-#newsletter-mobile .main-form-content {
+#newsletter-mobile .main-form-content,
+#contact .main-form-content,
+#contact-mobile .main-form-content {
     background: var(--color-main);
     /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);*/
     border-radius: 1.5rem;
 }
 
-#newsletter h1,
-#newsletter-mobile h1 {
+#newsletter h4,
+#newsletter-mobile h4,
+#contact h4,
+#contact-mobile h4 {
     color: var(--menu-text-color);
     font-size: 3rem;
     line-height: 80%;
@@ -480,7 +484,9 @@ body {
 }
 
 #newsletter button,
-#newsletter-mobile button {
+#newsletter-mobile button,
+#contact button,
+#contact-mobile button {
     display: block;
     width: 12rem;
     height: 3.5rem;
@@ -495,7 +501,9 @@ body {
 }
 
 #newsletter button:hover,
-#newsletter-mobile button:hover {
+#newsletter-mobile button:hover,
+#contact button:hover,
+#contact-mobile button:hover {
     background: var(--highlight-logo);
     color: var(--color-main);
 }
@@ -584,11 +592,6 @@ body {
     max-height: 20rem;
 }
 
-#contact .main-form .form-content {
-    border-radius: 3rem;
-    width: 90%;
-}
-
 #contact h1,
 #contact-mobile h1,
 #faq h1 {
@@ -596,6 +599,10 @@ body {
     line-height: 80%;
     color: var(--menu-text-color);
     font-weight: 500;
+}
+
+#contact-mobile h4 {
+    font-size: 1.8rem;
 }
 
 #contact .main-cart {
@@ -607,43 +614,18 @@ body {
     max-height: 30rem;
 }
 
-#contact .main-form-content,
-#contact-mobile .main-form-content {
+#contact .main-contact-content,
+#contact-mobile .main-contact-content {
     background: var(--color-main);
     /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);*/
     border-radius: 50%;
 }
 
-#contact h4,
-#contact-mobile h4 {
-    color: var(--menu-text-color);
-    font-size: 3rem;
-    line-height: 80%;
-
-    font-family: Caveat, serif;
-    font-style: normal;
-    font-weight: normal;
-}
-
-#contact button,
-#contact-mobile button {
-    width: 12rem;
-    height: 3.5rem;
-
-    font-size: 1.5rem;
-
-    background: var(--menu-item-bg-color);
-    color: var(--highlight-logo);
-    font-family: Cormorant, serif;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    border-radius: 1.5rem;
-}
-
 #contact .rotated {
     right: 5rem;
-    top: 15rem;
+    top: 10rem;
     width: 30%;
-    height: 80%;
+    height: 60%;
     max-width: 600px;
     transform: rotate(180deg);
 }
@@ -657,17 +639,15 @@ body {
     opacity: 0.4;
 }
 
-#contact button:hover,
-#newsletter-mobile button:hover {
-    background: var(--highlight-logo);
-    color: var(--color-main);
-}
-
 #contact .card-body p,
-#newsletter-mobile .card-body p {
+#contact-mobile .card-body p {
     font-family: Cormorant, serif;
     color: var(--highlight-logo);
     font-size: 1.3rem;
+}
+
+#contact-mobile .card-body p {
+    font-size: 1.1rem;
 }
 
 #main-footer {

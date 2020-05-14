@@ -1,0 +1,88 @@
+{% extends "layouts/main_layout.twig" %}
+
+{% block title %}Наталья Горчакова{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+
+<body>
+{% block mainHeader %}
+    {{ parent() }}
+{% endblock %}
+{% block nav %}
+    {{ parent() }}
+{% endblock %}
+
+<!--  contact section  -->
+    <section id="contact" class="py-3 d-none d-sm-block">
+        <img class="bg-rec rotated" src="/templates/img/bg/shape-light-coral-edge.svg" alt="">
+        <img class="bg-rec rotated-1" src="/templates/img/bg/shape-lilac.svg" alt="">
+        <h1 class="text-center mb-5">Контакты</h1>
+        <div class="row mb-3">
+            <div class="col-md-6 main-cart p-4">
+                <div class="card p-2 main-form-content main-contact-content">
+                    <div class="card-body text-center">
+                        <h4>Адрес Офиса</h4>
+                        <p>г. Москва, ул. Рублевская, д. 1</p>
+                        <h4>Email</h4>
+                        <p>patience@list.ru</p>
+                        <h4>Телефон</h4>
+                        <p>+7 (926) 172-38-78</p>
+                        <h4>Skype</h4>
+                        <p>natalia477399</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 main-form ml-auto">
+                <div class="card m-4 p-3 main-form-content text-center">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact-mobile" class="py-3 d-block d-sm-none">
+        <h1 class="text-center mb-5">Контакты</h1>
+        <div class="row mb-3">
+            <div class="col-md-6 main-cart p-4">
+                <div class="card p-2 main-form-content main-contact-content">
+                    <div class="card-body text-center">
+                        <h4>Адрес Офиса</h4>
+                        <p>г. Москва, ул. Рублевская, д. 1</p>
+                        <h4>Email</h4>
+                        <p>patience@list.ru</p>
+                        <h4>Телефон</h4>
+                        <p>+7 (926) 172-38-78</p>
+                        <h4>Skype</h4>
+                        <p>natalia477399</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 main-form ml-auto">
+                <div class="card m-3 p-3 main-form-content text-center">
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!--    Footer-->
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+
+    {% block mainScripts %}
+        {{ parent() }}
+    {% endblock %}
+
+    <script src="/templates/js/send_form.js"></script>
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear());
+    </script>
+</body>
+
+</html>
+{% endblock %}

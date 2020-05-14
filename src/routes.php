@@ -4,14 +4,7 @@ use \Psr\Http\Message\ResponseInterface as Response;
 require 'app.php';
 
 $app->get('/', function (Request $req, Response $res) {
-//    $lead = new \App\Models\Lead();
-//    $lead->phone = 77823432;
-//    $lead->name = 'name';
-//    $lead->session_type = 'online';
-//    $lead->save();
-//    $res->getBody()->write('Created');
-
-    return $this->get('view')->render($res, 'home.html');
+    return $this->get('view')->render($res, 'home.twig');
 });
 
 $app->post('/', function (Request $req, Response $res) {
@@ -28,7 +21,18 @@ $app->post('/', function (Request $req, Response $res) {
     return $res;
 });
 
-$app->post('/users', function (Request $req, Response $res) {
-    $res->getBody()->write('users');
-    return $res;
+$app->get('/about', function (Request $req, Response $res) {
+    return $this->get('view')->render($res, 'about.twig');
+});
+
+$app->get('/blog', function (Request $req, Response $res) {
+    return $this->get('view')->render($res, 'blog.twig');
+});
+
+$app->get('/contact', function (Request $req, Response $res) {
+    return $this->get('view')->render($res, 'contact.twig');
+});
+
+$app->get('/faq', function (Request $req, Response $res) {
+    return $this->get('view')->render($res, 'faq.twig');
 });
