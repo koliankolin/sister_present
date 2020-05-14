@@ -87,6 +87,11 @@ body {
     display: none;
 }
 
+.navbar-toggler .close-icon {
+    margin-left: 0.2rem;
+    margin-bottom: -0.2rem;
+}
+
 .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
     display: inline;
 }
@@ -101,7 +106,7 @@ body {
 }
 
 .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='5 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#555' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    margin-left: -0.20rem;
 }
 
 .navbar-light .navbar-nav .nav-link {
