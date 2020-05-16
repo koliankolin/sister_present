@@ -31,30 +31,18 @@ $app->group('', function () use($app) {
 
     $app->post('/', function (Request $req, Response $res) {
         sendLead($req);
-        $result = true;
-        while ($result) {
-            $reslt = json_decode(sendTelegranNotification($req));
-            if (key_exists('error', $reslt)) {
+        while (true) {
+            $dataRes = json_decode(sendTelegranNotification($req));
+            if (key_exists('error', $dataRes)) {
                 continue;
             }
-            if (key_exists('ok', $reslt) && $reslt['ok']) {
+            if (key_exists('ok', $dataRes) && $dataRes['ok']) {
                 break;
             }
         }
         return $res;
     });
 });
-
-//$app->get('/telegram', function (Request $req, Response $res) {
-////    var_dump($req->getQueryParams());
-//   var_dump(sendTelegranNotification($req));
-//   return $res;
-//});
-
-//$app->get('/', function (Request $req, Response $res) {
-//        return $this->get('view')->render($res, 'home.twig');
-//    })->setName('home');
-
 
 $app->get('/about', function (Request $req, Response $res) {
     return $this->get('view')->render($res, 'about.twig');
