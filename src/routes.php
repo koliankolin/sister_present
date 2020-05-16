@@ -44,6 +44,11 @@ $app->group('', function () use($app) {
     });
 });
 
+//$app->get('/telegram', function (Request $req, Response $res) {
+//    var_dump(sendTelegranNotification($req));
+//    return $res;
+//});
+
 $app->get('/about', function (Request $req, Response $res) {
     return $this->get('view')->render($res, 'about.twig');
 });
@@ -66,4 +71,9 @@ $app->group('', function () use($app) {
 
 $app->get('/faq', function (Request $req, Response $res) {
     return $this->get('view')->render($res, 'faq.twig');
+});
+
+$app->get('/insta/callback', function (Request $req, Response $res) {
+   var_dump($req->getQueryParams());
+   return $res;
 });
