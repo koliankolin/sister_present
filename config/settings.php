@@ -5,6 +5,8 @@ return [
             'template_path' => __DIR__ . '/../templates/html',
         ],
 
+        'telegram' => '1156032922:AAEruHj9DCpssP4Jo84HiumdpW6fodQ_A9s',
+
         'db' => [
             'driver' => 'mysql',
             'host' => 'db',
