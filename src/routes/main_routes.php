@@ -2,9 +2,12 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use \App\Notifications\TelegramNotification;
+use \App\Instagram\InstagramLoader;
 
-require 'app.php';
+// TODO: why?!
+require '/var/www/html/src/app.php';
 
+// TODO: add Controler for that
 function sendLead(Request $req) {
     $data = $req->getParsedBody();
     $lead = new \App\Models\Lead();
@@ -18,6 +21,7 @@ function sendLead(Request $req) {
     }
 }
 
+// TODO: add Controler for that
 function sendTelegranNotification(Request $req) {
     $data = $req->getParsedBody() ?? $req->getQueryParams();
     $telegramNotifier = new TelegramNotification();
@@ -54,7 +58,9 @@ $app->get('/about', function (Request $req, Response $res) {
 });
 
 $app->get('/blog', function (Request $req, Response $res) {
-    return $this->get('view')->render($res, 'blog.twig');
+    $instagramLoader = new InstagramLoader();
+    $posts = $instagramLoader->getPosts();
+    return $this->get('view')->render($res, 'blog.twig', compact('posts'));
 });
 
 $app->group('', function () use($app) {
@@ -71,9 +77,4 @@ $app->group('', function () use($app) {
 
 $app->get('/faq', function (Request $req, Response $res) {
     return $this->get('view')->render($res, 'faq.twig');
-});
-
-$app->get('/insta/callback', function (Request $req, Response $res) {
-   var_dump($req->getQueryParams());
-   return $res;
 });

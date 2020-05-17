@@ -19,36 +19,19 @@
             <div class="row">
                 <div class="col">
                     <div class="card-columns">
-                        <div class="card">
-                            <img src="https://source.unsplash.com/random/301x200/" alt="" class="img-fluid card-img-top rounded-pill">
-                            <div class="card-body">
-                                <h4 class="card-title">Post One</h4>
-                                <small class="text-muted">Автор: Наталья Горчакова</small>
-                                <hr>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid aspernatur fugiat iure labore minima, modi mollitia nam possimus quasi quia, recusandae suscipit tempore veritatis! Atque corporis repudiandae suscipit!</p>
+                        {% for post in posts %}
+                            <div class="card">
+                                <img src="{{ post.image }}" alt="" class="img-fluid card-img-top rounded-pill">
+                                <div class="card-body">
+                                    <h4 class="card-title">Post One</h4>
+                                    <small class="text-muted">Автор: Наталья Горчакова</small>
+                                    <p>Кол-во лайков: {{ post.likes_count }}</p>
+                                    <hr>
+                                    <p class="card-text">{{ post.text }}</p>
+                                    <a href="{{ post.link }}">Ссылка на пост в инстаграм</a>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img src="https://source.unsplash.com/random/302x200/" alt="" class="img-fluid card-img-top">
-                            <div class="card-body">
-                                <h4 class="card-title">Post Two</h4>
-                                <small class="text-muted">Автор: Наталья Горчакова</small>
-                                <hr>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid aspernatur fugiat iure labore minima, modi mollitia nam possimus quasi quia, recusandae suscipit tempore veritatis! Atque corporis repudiandae suscipit!</p>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <img src="https://source.unsplash.com/random/300x200/" alt="" class="img-fluid card-img-top">
-                            <div class="card-body">
-                                <h4 class="card-title">Post Three</h4>
-                                <small class="text-muted">Автор: Наталья Горчакова</small>
-                                <hr>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid aspernatur fugiat iure labore minima, modi mollitia nam possimus quasi quia, recusandae suscipit tempore veritatis! Atque corporis repudiandae suscipit!</p>
-                            </div>
-                        </div>
-
+                        {% endfor %}
                     </div>
                 </div>
             </div>
