@@ -16,6 +16,13 @@
   # absolute physical path to the directory that contains this htaccess file.
   # RewriteBase /
 
+  #TODO: change to static ip
+  RewriteCond %{REQUEST_URI} [^/admin|^/insta/callback|^/insta/loadAuth]
+  RewriteCond %{REMOTE_ADDR} !=172.24.0.1
+#  RewriteCond %{REMOTE_ADDR} !=127.0.0.1
+#  RewriteCond %{REMOTE_ADDR} !=10.0.0.3
+  RewriteRule ^(.*)$ - [R=403,L]
+
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^ public/index.php [QSA,L]
 </IfModule>

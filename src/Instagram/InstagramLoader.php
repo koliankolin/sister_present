@@ -3,29 +3,25 @@
 namespace App\Instagram;
 use PHLAK\Config\Config;
 use Requests;
+use App\Models\Token;
 
 class InstagramLoader {
     private $configService;
     private $clientId;
     private $clientSecrete;
-    private $accessToken;
     private $callbackUrl = 'http://localhost:8888/insta/callback';
-    private $authUrl = 'https://api.instagram.com/oauth/authorize';
     private $tokenUrl = 'https://api.instagram.com/oauth/access_token';
     private $mediaUrl = 'https://api.instagram.com/v1/users/self/media/recent/';
     private $tokenGrantType = 'authorization_code';
-    private $refreshRokenGrantType = 'ig_refresh_token';
-    private $refreshTokenUrl = 'https://graph.instagram.com/refresh_access_token';
     private $codeResponseType = 'code';
 
     public function __construct() {
         $this->configService = new Config('../config/settings.php');
         $this->clientId = $this->configService->get('insta')['client_id'];
         $this->clientSecrete = $this->configService->get('insta')['client_secrete'];
-        $this->accessToken = $this->configService->get('insta')['access_token'];
     }
 
-    public function getAuth() {
+    public function getAuthData() {
         return $this->_getAuthCode();
     }
 
@@ -43,14 +39,22 @@ class InstagramLoader {
         ];
 
         $res = Requests::post($this->tokenUrl, $headers, $data);
-        return json_decode($res->body)['access_token'];
+        return (json_decode($res->body))->access_token;
     }
 
-    //TODO: refresh token
+    public function _refreshToken() {
+
+    }
+
+    //TODO: make script for refresh token by cron
 
     public function getPosts() {
-        $res = Requests::get($this->mediaUrl . "?access_token={$this->accessToken}");
-        $posts = json_decode($res->body)->data;
+        $accessToken = Token::where('type', 'insta')->first();
+        $res = json_decode(Requests::get($this->mediaUrl . "?access_token={$accessToken->token}")->body);
+        if ($res->meta->error_type === 'OAuthAccessTokenException') {
+            return null;
+        }
+        $posts = $res->data;
         $postPrepared = [];
         foreach ($posts as $post) {
             $postPrepared[] = $this->_preparePost($post);
