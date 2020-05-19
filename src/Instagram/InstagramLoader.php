@@ -3,7 +3,7 @@
 namespace App\Instagram;
 use PHLAK\Config\Config;
 use Requests;
-use App\Models\Token;
+use App\Models;
 
 class InstagramLoader {
     private $configService;
@@ -49,17 +49,24 @@ class InstagramLoader {
     //TODO: make script for refresh token by cron
 
     public function getPosts() {
-        $accessToken = Token::where('type', 'insta')->first();
+        $lastPostFromDb = (new Models\Post())->latest('dt_inst')->first();
+        $lastPostDate = $lastPostFromDb->dt_inst ?? '1970-01-01';
+        $accessToken = Models\Token::where('type', 'insta')->first();
         $res = json_decode(Requests::get($this->mediaUrl . "?access_token={$accessToken->token}")->body);
-        if ($res->meta->error_type === 'OAuthAccessTokenException') {
+        if (!$res || $res->meta->error_type === 'OAuthAccessTokenException') {
             return null;
         }
         $posts = $res->data;
-        $postPrepared = [];
         foreach ($posts as $post) {
-            $postPrepared[] = $this->_preparePost($post);
+            $preparedPost = $this->_preparePost($post);
+            if (new \DateTime($preparedPost['dt_inst']->format('Y-m-d')) > new \DateTime($lastPostDate)) {
+                Models\Post::create(
+                    $preparedPost
+                );
+            }
         }
-        return $postPrepared;
+
+        return Models\Post::orderBy('dt_inst', 'desc')->get();
     }
 
     private function _removeTags($text, $tags) {
@@ -70,15 +77,17 @@ class InstagramLoader {
     }
 
     private function _preparePost($post) {
+        $createdAt = (new \DateTime())->setTimestamp($post->created_time);
         $image = $post->images->standard_resolution->url;
         $text = $this->_removeTags($post->caption->text, $post->tags);
         $likesCount = $post->likes->count;
         $link = $post->link;
         return [
-            'image' => $image,
+            'img' => $image,
             'text' => $text,
-            'likes_count' => $likesCount,
             'link' => $link,
+            'likes' => $likesCount,
+            'dt_inst' => $createdAt,
         ];
     }
 

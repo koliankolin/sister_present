@@ -682,3 +682,11 @@ body {
 [data-toggle="collapse"].collapsed i:before{
     content: "\f0fe";
 }
+
+#blog [data-toggle="collapse"] i:before{
+    content: "Скрыть";
+}
+
+#blog [data-toggle="collapse"].collapsed i:before{
+    content: "Подробнее...";
+}

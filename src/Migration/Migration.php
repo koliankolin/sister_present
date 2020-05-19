@@ -19,8 +19,8 @@ class Migration extends AbstractMigration {
             'database'  => 'myDb',
             'username'  => 'user',
             'password'  => 'test',
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
+            'charset'   => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
         ]);
 
         $this->capsule->bootEloquent();
