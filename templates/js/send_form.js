@@ -23,6 +23,7 @@ elemToFill.innerHTML = `
             </div>
             <div class="form-group">
               <button class="btn m-auto" type="submit">Записаться</button>
+              <small>Отправляя форму Вы соглашаетесь на обработку персональных данных</small>
             </div>
           </form>
 `;

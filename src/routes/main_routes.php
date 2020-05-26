@@ -10,19 +10,22 @@ require '/var/www/html/src/app.php';
 // TODO: add Controler for that
 function saveLead(Request $req) {
     $data = $req->getParsedBody();
-    \App\Models\Lead::updateOrCreate(
-        ['phone' => $data['phone']],
-        ['name' => $data['name']]
-    );
-//    $lead = new \App\Models\Lead();
-//    foreach ($data as $key => $value) {
-//        try {
-//            $lead->set($key, $value);
-//            $lead->save();
-//        } catch (\Exception $e) {
-//            //return $res->withStatus(500, "Invalid attribute {$key}");
-//        }
-//    }
+//    \App\Models\Lead::updateOrCreate(
+//        ['phone' => $data['phone']],
+//        [
+//            'name' => $data['name'],
+//            'session_type' => $data['session_type'],
+//        ]
+//    );
+    $lead = new \App\Models\Lead();
+    foreach ($data as $key => $value) {
+        try {
+            $lead->set($key, $value);
+            $lead->save();
+        } catch (\Exception $e) {
+            //return $res->withStatus(500, "Invalid attribute {$key}");
+        }
+    }
 }
 
 // TODO: add Controler for that

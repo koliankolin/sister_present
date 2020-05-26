@@ -14,6 +14,7 @@ class TokenMigration extends Migration
             $table->timestamps();
         });
     }
+
     public function down()  {
         $this->schema->drop('tokens');
     }

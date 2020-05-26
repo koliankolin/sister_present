@@ -138,24 +138,24 @@ body {
 .carousel-image-1 {
     /*background: url("/templates/img/girl_lavender.jpg");*/
     background: linear-gradient(
-            rgba(20,20,20, .5),
-            rgba(20,20,20, .5)),
+            rgba(20,20,20, .35),
+            rgba(20,20,20, .35)),
         url("/templates/img/girl_lavender.jpg");
     background-size: cover;
 }
 
 .carousel-image-2 {
     background: linear-gradient(
-            rgba(20,20,20, .5),
-            rgba(20,20,20, .5)),
+            rgba(20,20,20, .35),
+            rgba(20,20,20, .35)),
     url("/templates/img/lotos.jpg");
     background-size: cover;
 }
 
 .carousel-image-3 {
     background: linear-gradient(
-            rgba(20,20,20, .5),
-            rgba(20,20,20, .5)),
+            rgba(20,20,20, .35),
+            rgba(20,20,20, .35)),
     url("/templates/img/flowers.jpg");
     background-size: cover;
 }
@@ -166,7 +166,7 @@ body {
 
 #showcase .carousel-inner {
     /*max-width: 90%;*/
-    border-radius: 3rem;
+    /*border-radius: 3rem;*/
 }
 
 #showcase .blockquote {
@@ -514,7 +514,8 @@ body {
 }
 
 #newsletter .card-body p,
-#newsletter-mobile .card-body p {
+#newsletter-mobile .card-body p,
+#blog p {
     font-family: Cormorant, serif;
     color: var(--highlight-logo);
     max-width: 43rem;
@@ -527,9 +528,11 @@ body {
     height: 30rem;
 }
 
-#about p {
+#about p,
+#blog .card-text,
+#blog a {
     color: var(--highlight-logo);
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 #faq h2 {
@@ -662,9 +665,14 @@ body {
     font-size: 1.5rem;
 }
 
-#main-footer .icons {
+.icons {
     color: var(--highlight-logo);
     font-size: 2rem;
+}
+
+#blog .show {
+    color: var(--highlight-logo);
+    font-size: 1.1rem;
 }
 
 #main-footer .socials {
